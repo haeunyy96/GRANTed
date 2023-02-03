@@ -298,10 +298,6 @@ h4 {
   font-family: "Cardo", serif;
 }
 
-a {
-  color: #FFF;
-}
-
 html {
   font-family: "Open Sans", sans-serif;
 }
@@ -345,10 +341,18 @@ nav {
   align-items: center;
 }
 .navBar li {
-  padding-right: 15px;
   list-style: none;
   font-weight: 700;
   letter-spacing: 0.1rem;
+}
+
+.navMenu {
+  color: #011E42;
+  padding-right: 25px;
+}
+.navMenu:hover {
+  transition: 500ms;
+  color: #A92B37;
 }
 
 button {
@@ -367,7 +371,7 @@ button {
 .loginBtn:hover, .loginBtn:focus {
   background-color: #FFF;
   color: #A92B37;
-  transition: 300ms;
+  transition: 500ms;
   cursor: pointer;
 }
 
@@ -378,7 +382,7 @@ button {
   width: 100%;
 }
 
-.museum {
+.museum, .viewer {
   background-color: #868C96;
   color: #FFF;
   padding: 60px 60px 200px 60px;
@@ -388,16 +392,16 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-.museum h3 {
+.museum h3, .viewer h3 {
   width: 40%;
   font-family: "Cardo", serif;
   letter-spacing: 0.25rem;
 }
-.museum h3 span {
+.museum h3 span, .viewer h3 span {
   display: block;
   padding-top: 10px;
 }
-.museum p {
+.museum p, .viewer p {
   width: 56%;
   font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
@@ -448,12 +452,16 @@ input {
 .mainLoginBtn:hover, .mainLoginBtn:focus {
   background-color: #FFF;
   color: #A92B37;
-  transition: 300ms;
+  transition: 500ms;
   cursor: pointer;
 }
 
 .btn {
   margin-top: 10px;
+}
+
+.viewer {
+  background-color: #A92B37;
 }
 
 footer {
@@ -478,11 +486,4 @@ footer {
 
 .footerGrant {
   font-size: 1.6rem;
-}
-
-hr {
-  width: 50px;
-  transform: rotate(90deg);
-  border: none;
-  border-top: 1px solid #FFF;
 }/*# sourceMappingURL=styles.css.map */

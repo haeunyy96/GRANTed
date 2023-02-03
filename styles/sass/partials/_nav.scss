@@ -31,13 +31,20 @@ nav {
     font-size: 0.8rem;
     align-items: center;
     li {
-        padding-right: 15px;
         list-style: none;
         font-weight: 700;
         letter-spacing: 0.1rem;
     }
 }
+.navMenu {
+    color: $primary;
+    padding-right: 25px;
 
+    &:hover{
+        transition: 500ms;
+        color: $quaternary;
+    }
+}
 button {
     border: none;
 }
@@ -54,7 +61,7 @@ button {
     &:focus {
         background-color: $tertiary;
         color: $quaternary;
-        transition: 300ms;
+        transition: 500ms;
         cursor: pointer;
     }
 }

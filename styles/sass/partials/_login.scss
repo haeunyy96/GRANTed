@@ -40,7 +40,7 @@ input {
     &:focus {
         background-color: $tertiary;
         color: $quaternary;
-        transition: 300ms;
+        transition: 500ms;
         cursor: pointer;
     }
 }
