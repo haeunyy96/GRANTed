@@ -48,3 +48,31 @@ input {
 .btn {
     margin-top: 10px;
 }
+
+// 
+
+.indexLoginDiv {
+    margin: 100px ;
+    text-align: center;
+
+    button {
+        margin-top: 50px;
+    }
+}
+.bottomLoginBtn {
+    background-color: $tertiary;
+    color: $quaternary;
+    letter-spacing: 0.15rem;
+        border: 1px solid $quaternary;
+        padding: 12px 18px;
+        border-radius: 7px 7px;
+        font-size: 0.8rem;
+    
+        &:hover,
+        &:focus {
+            background-color: $quaternary;
+            color: $tertiary;
+            transition: 500ms;
+            cursor: pointer;
+        }
+}

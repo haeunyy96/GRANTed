@@ -298,6 +298,11 @@ h4 {
   font-family: "Cardo", serif;
 }
 
+h5 {
+  font-size: 1.4rem;
+  font-family: "Cardo", serif;
+}
+
 html {
   font-family: "Open Sans", sans-serif;
 }
@@ -458,6 +463,30 @@ input {
 
 .btn {
   margin-top: 10px;
+}
+
+.indexLoginDiv {
+  margin: 100px;
+  text-align: center;
+}
+.indexLoginDiv button {
+  margin-top: 50px;
+}
+
+.bottomLoginBtn {
+  background-color: #FFF;
+  color: #A92B37;
+  letter-spacing: 0.15rem;
+  border: 1px solid #A92B37;
+  padding: 12px 18px;
+  border-radius: 7px 7px;
+  font-size: 0.8rem;
+}
+.bottomLoginBtn:hover, .bottomLoginBtn:focus {
+  background-color: #A92B37;
+  color: #FFF;
+  transition: 500ms;
+  cursor: pointer;
 }
 
 .viewer {
