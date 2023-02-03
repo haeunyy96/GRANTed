@@ -1,0 +1,50 @@
+.loginDiv {
+    margin: 170px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.loginBox {
+    width: 35%;
+    p {
+        margin: 20px 0;
+        color: #6B6B6B;
+        font-size: 0.9rem;
+    }
+}
+
+label {
+    font-family: $primaryFont;
+    font-size: 0.9rem;
+}
+
+input {
+    font-family: $secondaryFont;
+    font-size: 0.9rem;
+    padding: 14px 13px;
+    border: 1px solid lightgrey;
+    border-radius: 7px 7px;
+    width: 100%;
+}
+
+.mainLoginBtn {
+    background-color: $quaternary;
+    color: $tertiary;
+    letter-spacing: 0.1rem;
+    border: 1px solid $quaternary;
+    padding: 12px 18px;
+    border-radius: 7px 7px;
+    font-size: 0.8rem;
+        
+    &:hover,
+    &:focus {
+        background-color: $tertiary;
+        color: $quaternary;
+        transition: 300ms;
+        cursor: pointer;
+    }
+}
+
+.btn {
+    margin-top: 10px;
+}

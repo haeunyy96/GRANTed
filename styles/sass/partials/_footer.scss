@@ -1,0 +1,31 @@
+footer {
+    background-color: $primary;
+    color: $tertiary;
+    font-family: $primaryFont;
+    letter-spacing: 0.05rem;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+
+    img {
+        max-height: 50px;
+    }
+}
+
+.footerGrant {
+    font-size: 1.6rem;
+}
+
+hr {
+    width: 50px;
+    transform: rotate(90deg);
+    border: none;
+    border-top: 1px solid $tertiary;
+}

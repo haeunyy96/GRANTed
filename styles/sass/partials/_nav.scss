@@ -1,0 +1,60 @@
+.top {
+    background-color: $primary;
+    padding: 2px 20px;
+}
+
+.uoftDiv {
+    width: 12%;
+    img {
+        width: 100%;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+.grantEd {
+    font-family: $primaryFont;
+    color: $primary;
+    padding-top: 5px;
+    letter-spacing: 0.05rem;
+    span {
+        color: $quaternary;
+    }
+}
+
+.navBar {
+    display: flex;
+    font-size: 0.8rem;
+    align-items: center;
+    li {
+        padding-right: 15px;
+        list-style: none;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+    }
+}
+
+button {
+    border: none;
+}
+.loginBtn {
+    background-color: $quaternary;
+    color: $tertiary;
+    letter-spacing: 0.1rem;
+    border: 1px solid $quaternary;
+    padding: 9px 18px;
+    border-radius: 7px 7px;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+        background-color: $tertiary;
+        color: $quaternary;
+        transition: 300ms;
+        cursor: pointer;
+    }
+}

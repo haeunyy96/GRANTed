@@ -1,0 +1,31 @@
+.museum {
+    background-color: #868C96;
+    color: $tertiary;
+    padding: 60px 60px 200px 60px;
+    margin: 20px;
+    border-radius: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+        width: 40%;
+        font-family: $primaryFont;
+        letter-spacing: 0.25rem;
+
+        span {
+            display: block;
+            padding-top: 10px;
+        }
+    }
+
+    p {
+        width: 56%;
+        font-family: $secondaryFont;
+        font-size: 0.8rem;
+    }
+}
+
+.grants {
+    font-size: 1.6rem;
+}
