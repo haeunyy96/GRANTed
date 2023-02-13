@@ -38,7 +38,7 @@
         <div class="viewer">
             <h3>3D Viewer</h3>
             <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nam sint fugit ratione aliquam, aspernatur nemo voluptatem illum exercitationem, ullam mollitia rerum inventore eveniet dolorem.</p> -->
-            <div class="light viewerBox">
+            <div class="light viewerBox"></div>
                 <div id="unity-container" class="unity-desktop">
                     <canvas id="unity-canvas"></canvas>
                 </div>
@@ -69,71 +69,71 @@
         </div>
     </footer>
     <!-- <script src="index.js"> -->
-     <script>
-            const hideFullScreenButton = "";
-            const buildUrl = "Build";
-            const loaderUrl = buildUrl + "/ViewGL.loader.js";
-            const config = {
-                dataUrl: buildUrl + "/ViewGL.data",
-            frameworkUrl: buildUrl + "/ViewGL.framework.js",
-            codeUrl: buildUrl + "/ViewGL.wasm",
+    <script>
+        const hideFullScreenButton = "";
+        const buildUrl = "Build";
+        const loaderUrl = buildUrl + "/ViewGL.loader.js";
+        const config = {
+            dataUrl: buildUrl + "/ViewGL.data.unityweb",
+            frameworkUrl: buildUrl + "/ViewGL.framework.js.unityweb",
+            codeUrl: buildUrl + "/ViewGL.wasm.unityweb",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
-            productName: "WhiteViewerTest",
+            productName: "GRANTedViewer",
             productVersion: "0.1.0",
-      };
+        };
 
-            const container = document.querySelector("#unity-container");
-            const canvas = document.querySelector("#unity-canvas");
-            const loadingCover = document.querySelector("#loading-cover");
-            const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
-            const progressBarFull = document.querySelector("#unity-progress-bar-full");
-            const fullscreenButton = document.querySelector("#unity-fullscreen-button");
-            const spinner = document.querySelector('.spinner');
+        const container = document.querySelector("#unity-container");
+        const canvas = document.querySelector("#unity-canvas");
+        const loadingCover = document.querySelector("#loading-cover");
+        const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+        const progressBarFull = document.querySelector("#unity-progress-bar-full");
+        const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        const spinner = document.querySelector('.spinner');
 
-            const canFullscreen = (function() {
-        for (const key of [
-            'exitFullscreen',
-            'webkitExitFullscreen',
-            'webkitCancelFullScreen',
-            'mozCancelFullScreen',
-            'msExitFullscreen',
+        const canFullscreen = (function () {
+            for (const key of [
+                'exitFullscreen',
+                'webkitExitFullscreen',
+                'webkitCancelFullScreen',
+                'mozCancelFullScreen',
+                'msExitFullscreen',
             ]) {
-          if (key in document) {
-            return true;
-          }
-        }
+                if (key in document) {
+                    return true;
+                }
+            }
             return false;
-      }());
+        }());
 
-            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                container.className = "unity-mobile";
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            container.className = "unity-mobile";
             config.devicePixelRatio = 1;
-      }
-            loadingCover.style.display = "";
+        }
+        loadingCover.style.display = "";
 
-            const script = document.createElement("script");
-            script.src = loaderUrl;
-      script.onload = () => {
-                createUnityInstance(canvas, config, (progress) => {
-                    spinner.style.display = "none";
-                    progressBarEmpty.style.display = "";
-                    progressBarFull.style.width = `${100 * progress}%`;
-                }).then((unityInstance) => {
-                    loadingCover.style.display = "none";
-                    if (canFullscreen) {
-                        if (!hideFullScreenButton) {
-                            fullscreenButton.style.display = "";
-                        }
-                        fullscreenButton.onclick = () => {
-                            unityInstance.SetFullscreen(1);
-                        };
+        const script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+                spinner.style.display = "none";
+                progressBarEmpty.style.display = "";
+                progressBarFull.style.width = `${100 * progress}%`;
+            }).then((unityInstance) => {
+                loadingCover.style.display = "none";
+                if (canFullscreen) {
+                    if (!hideFullScreenButton) {
+                        fullscreenButton.style.display = "";
                     }
-                }).catch((message) => {
-                    alert(message);
-                });
-      };
-            document.body.appendChild(script);
+                    fullscreenButton.onclick = () => {
+                        unityInstance.SetFullscreen(1);
+                    };
+                }
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
     </script>
 </body>
 
