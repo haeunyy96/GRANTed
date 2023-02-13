@@ -491,6 +491,13 @@ input {
 
 .viewer {
   background-color: #A92B37;
+  display: block;
+}
+
+.viewerBox {
+  background-color: #FFF;
+  border-radius: 15px 15px;
+  margin-top: 30px;
 }
 
 footer {
